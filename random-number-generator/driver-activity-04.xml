@@ -1,0 +1,32 @@
+<devicedata>
+	<name>Random Number Generator</name>
+	<creator>Control4</creator>
+	<created>05/13/2026 10:00</created>
+	<modified>05/20/2026 12:00</modified>
+	<version>3</version>
+	<small image_source="c4z">icons/device_16.png</small>
+	<large image_source="c4z">icons/device_32.png</large>
+	<control>lua_gen</control>
+	<config>
+		<script file="driver.lua"/>
+		<documentation file = "www/documentation.rtf"></documentation>
+		<commands>
+			<command>
+				<name>GenerateNewNumber</name>
+				<description>Generate new random number</description>
+				<params/>
+			</command>
+		</commands>
+	</config>
+	<combo>true</combo>
+	<proxies>
+		<proxy name="random_number_generator">Random Number</proxy>
+	</proxies>
+	<events>
+		<event>
+			<id>1</id>
+			<name>RandomNumberGenerated</name>
+			<description>Event fired when a new random number is generated</description>
+		</event>
+	</events>
+</devicedata>

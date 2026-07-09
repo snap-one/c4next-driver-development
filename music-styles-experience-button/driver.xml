@@ -1,0 +1,261 @@
+<devicedata>
+	<!-- 
+	If you are making your own driver then change the details below.  Note the date is in US format: Month/Day/Year
+	-->
+	<name>Music Styles Button</name>
+	<model>Scenario</model>
+	<creator>KCT</creator>
+	<created>05/19/2026 10:00</created>
+	<modified>05/19/2026 12:00</modified>
+	<!-- 
+	Each time you modify the driver update the version number below.
+	-->
+	<version>1</version>
+	<!-- 
+	Modify the path in the display_icons section to match the name of your driver.
+	So if you saved this driver as scenario-party-time.c4z replace music_styles_experience_button with scenario-party-time
+	Ensure you also add your own png icons to the icons/device folder named default_1024.png, default_512.png, default_300.png, default_90.png and default_70.png
+	Also add selected state icons as selected_1024.png, selected_512.png, selected_300.png, selected_90.png and selected_70.png
+	-->
+	<capabilities>
+		<navigator_display_option proxybindingid="5001">
+			<display_icons>
+				<Icon height="90" width="90">controller://driver/music_styles_experience_button/icons/ancient/default_90.png</Icon>
+				<Icon height="70" width="70">controller://driver/music_styles_experience_button/icons/ancient/default_70.png</Icon>
+				<Icon height="300" width="300">controller://driver/music_styles_experience_button/icons/ancient/default_300.png</Icon>
+				<Icon height="512" width="512">controller://driver/music_styles_experience_button/icons/ancient/default_512.png</Icon>
+				<Icon height="1024" width="1024">controller://driver/music_styles_experience_button/icons/ancient/default_1024.png</Icon>
+				<state id="Defaultancient">
+					<Icon width="70" height="70">controller://driver/music_styles_experience_button/icons/ancient/default_70.png</Icon>
+					<Icon width="90" height="90">controller://driver/music_styles_experience_button/icons/ancient/default_90.png</Icon>
+					<Icon width="300" height="300">controller://driver/music_styles_experience_button/icons/ancient/default_300.png</Icon>
+					<Icon width="512" height="512">controller://driver/music_styles_experience_button/icons/ancient/default_512.png</Icon>
+					<Icon width="1024" height="1024">controller://driver/music_styles_experience_button/icons/ancient/default_1024.png</Icon>
+				</state>
+				<state id="Selectedancient">
+					<Icon width="70" height="70">controller://driver/music_styles_experience_button/icons/ancient/selected_70.png</Icon>
+					<Icon width="90" height="90">controller://driver/music_styles_experience_button/icons/ancient/selected_90.png</Icon>
+					<Icon width="300" height="300">controller://driver/music_styles_experience_button/icons/ancient/selected_300.png</Icon>
+					<Icon width="512" height="512">controller://driver/music_styles_experience_button/icons/ancient/selected_512.png</Icon>
+					<Icon width="1024" height="1024">controller://driver/music_styles_experience_button/icons/ancient/selected_1024.png</Icon>
+				</state>
+				<state id="Default30s">
+					<Icon width="70" height="70">controller://driver/music_styles_experience_button/icons/30s/default_70.png</Icon>
+					<Icon width="90" height="90">controller://driver/music_styles_experience_button/icons/30s/default_90.png</Icon>
+					<Icon width="300" height="300">controller://driver/music_styles_experience_button/icons/30s/default_300.png</Icon>
+					<Icon width="512" height="512">controller://driver/music_styles_experience_button/icons/30s/default_512.png</Icon>
+					<Icon width="1024" height="1024">controller://driver/music_styles_experience_button/icons/30s/default_1024.png</Icon>
+				</state>
+				<state id="Selected30s">
+					<Icon width="70" height="70">controller://driver/music_styles_experience_button/icons/30s/selected_70.png</Icon>
+					<Icon width="90" height="90">controller://driver/music_styles_experience_button/icons/30s/selected_90.png</Icon>
+					<Icon width="300" height="300">controller://driver/music_styles_experience_button/icons/30s/selected_300.png</Icon>
+					<Icon width="512" height="512">controller://driver/music_styles_experience_button/icons/30s/selected_512.png</Icon>
+					<Icon width="1024" height="1024">controller://driver/music_styles_experience_button/icons/30s/selected_1024.png</Icon>
+				</state>
+				<state id="Default40s">
+					<Icon width="70" height="70">controller://driver/music_styles_experience_button/icons/40s/default_70.png</Icon>
+					<Icon width="90" height="90">controller://driver/music_styles_experience_button/icons/40s/default_90.png</Icon>
+					<Icon width="300" height="300">controller://driver/music_styles_experience_button/icons/40s/default_300.png</Icon>
+					<Icon width="512" height="512">controller://driver/music_styles_experience_button/icons/40s/default_512.png</Icon>
+					<Icon width="1024" height="1024">controller://driver/music_styles_experience_button/icons/40s/default_1024.png</Icon>
+				</state>
+				<state id="Selected40s">
+					<Icon width="70" height="70">controller://driver/music_styles_experience_button/icons/40s/selected_70.png</Icon>
+					<Icon width="90" height="90">controller://driver/music_styles_experience_button/icons/40s/selected_90.png</Icon>
+					<Icon width="300" height="300">controller://driver/music_styles_experience_button/icons/40s/selected_300.png</Icon>
+					<Icon width="512" height="512">controller://driver/music_styles_experience_button/icons/40s/selected_512.png</Icon>
+					<Icon width="1024" height="1024">controller://driver/music_styles_experience_button/icons/40s/selected_1024.png</Icon>
+				</state>
+				<state id="Default50s">
+					<Icon width="70" height="70">controller://driver/music_styles_experience_button/icons/50s/default_70.png</Icon>
+					<Icon width="90" height="90">controller://driver/music_styles_experience_button/icons/50s/default_90.png</Icon>
+					<Icon width="300" height="300">controller://driver/music_styles_experience_button/icons/50s/default_300.png</Icon>
+					<Icon width="512" height="512">controller://driver/music_styles_experience_button/icons/50s/default_512.png</Icon>
+					<Icon width="1024" height="1024">controller://driver/music_styles_experience_button/icons/50s/default_1024.png</Icon>
+				</state>
+				<state id="Selected50s">
+					<Icon width="70" height="70">controller://driver/music_styles_experience_button/icons/50s/selected_70.png</Icon>
+					<Icon width="90" height="90">controller://driver/music_styles_experience_button/icons/50s/selected_90.png</Icon>
+					<Icon width="300" height="300">controller://driver/music_styles_experience_button/icons/50s/selected_300.png</Icon>
+					<Icon width="512" height="512">controller://driver/music_styles_experience_button/icons/50s/selected_512.png</Icon>
+					<Icon width="1024" height="1024">controller://driver/music_styles_experience_button/icons/50s/selected_1024.png</Icon>
+				</state>
+			</display_icons>
+		</navigator_display_option>
+	</capabilities>
+	<small image_source="c4z">icons/device_sm.png</small>
+	<large image_source="c4z">icons/device_lg.png</large>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<copyright>Copyright 2021 Wirepath Home Systems, LLC. All Rights Reserved.</copyright>
+	<manufacturer>Control4</manufacturer>
+	<config>
+		<script file="driver.lua"/>
+		<documentation file = "www/documentation.rtf"></documentation>
+		<properties>
+			<property>
+				<name>Driver Version</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Current State</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>On Name</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Off Name</name>
+				<default></default>
+				<type>STRING</type>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Toggle State Each Time Selected</name>
+				<type>LIST</type>
+				<items>
+					<item>Yes</item>
+					<item>No</item>
+				</items>
+				<default>Yes</default>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>On LED Color</name>
+				<type>COLOR_SELECTOR</type>
+				<default>0,200,0</default>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Off LED Color</name>
+				<type>COLOR_SELECTOR</type>
+				<default>200,0,0</default>
+				<readonly>false</readonly>
+			</property>
+			<property>
+				<name>Decade</name>
+				<type>LIST</type>
+				<items>
+					<item>ancient</item>
+					<item>30s</item>
+					<item>40s</item>
+					<item>50s</item>
+				</items>
+				<default>ancient</default>
+				<readonly>false</readonly>
+			</property>
+		</properties>
+		<commands>
+			<command>
+				<name>SetState</name>
+				<description>Set State to PARAM1 in NAME</description>
+				<params>
+					<param>
+						<name>State</name>
+						<type>LIST</type>
+						<items>
+							<item>Off</item>
+							<item>On</item>
+						</items>
+					</param>
+				</params>
+			</command>
+			<command>
+				<name>ToggleState</name>
+				<description>Toggle State of NAME</description>
+				<params/>
+			</command>
+		</commands>
+	</config>
+	<proxies>
+		<proxy proxybindingid="5001" name="Music Style" primary="True" image_source="c4z" large_image="icons/device_lg.png" small_image="icons/device_sm.png">uibutton</proxy>
+	</proxies>
+	<events>
+		<event>
+			<id>1</id>
+			<name>Off</name>
+			<description>Button Off from NAME</description>
+		</event>
+		<event>
+			<id>2</id>
+			<name>On</name>
+			<description>Button On from NAME</description>
+		</event>
+	</events>
+	<connections>
+		<connection>
+			<id>5001</id>
+			<facing>6</facing>
+			<connectionname>UIBUTTON</connectionname>
+			<type>2</type>
+			<consumer>False</consumer>
+			<audiosource>True</audiosource>
+			<videosource>True</videosource>
+			<linelevel>True</linelevel>
+			<classes>
+				<class>
+					<classname>UIBUTTON</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection>
+			<id>500</id>
+			<facing>6</facing>
+			<connectionname>Toggle</connectionname>
+			<type>1</type>
+			<consumer>False</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>BUTTON_LINK</classname>
+					<autobind>False</autobind>
+				</class>
+			</classes>
+			<hidden>False</hidden>
+		</connection>
+		<connection>
+			<id>501</id>
+			<facing>6</facing>
+			<connectionname>On</connectionname>
+			<type>1</type>
+			<consumer>False</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>BUTTON_LINK</classname>
+					<autobind>False</autobind>
+				</class>
+			</classes>
+			<hidden>False</hidden>
+		</connection>
+		<connection>
+			<id>502</id>
+			<facing>6</facing>
+			<connectionname>Off</connectionname>
+			<type>1</type>
+			<consumer>False</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>BUTTON_LINK</classname>
+					<autobind>False</autobind>
+				</class>
+			</classes>
+			<hidden>False</hidden>
+		</connection>
+	</connections>
+</devicedata>

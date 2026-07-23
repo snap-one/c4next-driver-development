@@ -1,0 +1,124 @@
+<devicedata>
+	<name>Ultimate Button</name>
+	<creator>KCT</creator>
+	<created>05/19/2026 10:00</created>
+	<modified>05/19/2026 12:00</modified>
+	<control>lua_gen</control>
+	<driver>DriverWorks</driver>
+	<version>1</version>
+	<proxies>
+		<proxy proxybindingid="5001" name="Ultimate Button" primary="True">keypad_proxy</proxy>
+	</proxies>
+	<config>
+		<script file="driver.lua"/>
+		<documentation file = "www/documentation.rtf"></documentation>
+		<properties>
+			<property>
+				<name>Button Name</name>
+				<default>Ultimate Button</default>
+				<type>STRING</type>
+				<readonly>true</readonly>
+			</property>
+			<property>
+				<name>Brightness</name>
+				<default>200</default>
+				<type>RANGED_INTEGER</type>
+				<minimum>0</minimum>
+				<maximum>255</maximum>
+				<readonly>false</readonly>
+				<tooltip>Set the brightness level of the button (0-255).</tooltip>
+			</property>
+			<property>
+				<name>Background Color</name>
+				<default>255,255,255</default>
+				<type>COLOR_SELECTOR</type>
+				<readonly>false</readonly>
+				<tooltip>Set the color of the button using the color selector.</tooltip>
+			</property>
+			<property>
+				<name>Text Color</name>
+				<default>0,0,0</default>
+				<type>COLOR_SELECTOR</type>
+				<readonly>false</readonly>
+				<tooltip>Set the color of the button using the color selector.</tooltip>
+			</property>
+		</properties>
+		<commands>
+		</commands>
+	</config>
+	<capabilities>
+		<has_leds>False</has_leds>
+		<leds_have_color>False</leds_have_color>
+		<push_release_support>False</push_release_support>
+		<click_support>True</click_support>
+		<multi_click_support>True</multi_click_support>
+		<fully_customizable>False</fully_customizable>
+		<engravable>False</engravable>
+		<custom_finishes>False</custom_finishes>
+		<hide_proxy_properties>False</hide_proxy_properties>
+		<button_behavior>False</button_behavior> <!-- all buttons are generic -->
+		<led_behavior>False</led_behavior>
+		<has_load>False</has_load>
+		<columns>1</columns>
+		<rows>6</rows>
+	</capabilities>
+
+	<connections>
+		<connection>
+			<id>500</id>
+			<facing>6</facing>
+			<connectionname>Toggle</connectionname>
+			<type>1</type>
+			<consumer>False</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<classname>BUTTON_LINK</classname>
+					<autobind>False</autobind>
+				</class>
+			</classes>
+			<hidden>False</hidden>
+		</connection>
+		<connection>
+			<id>5001</id>
+			<facing>6</facing>
+			<connectionname>Keypad</connectionname>
+			<type>2</type>
+			<consumer>False</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>False</linelevel>
+			<classes>
+				<class>
+					<autobind>True</autobind>
+					<classname>KEYPAD</classname>
+				</class>
+			</classes>
+		</connection>
+		<connection>
+			<id>6001</id>
+			<facing>1</facing>
+			<connectionname>Network</connectionname>
+			<type>4</type>
+			<consumer>True</consumer>
+			<audiosource>False</audiosource>
+			<videosource>False</videosource>
+			<linelevel>True</linelevel>
+			<classes>
+				<class>
+					<classname>TCP</classname>
+					<ports>
+						<port>
+							<number>1000</number>
+							<auto_connect>True</auto_connect>
+							<monitor_connection>True</monitor_connection>
+							<keep_connection>True</keep_connection>
+						</port>
+					</ports>
+				</class>
+			</classes>
+		</connection>
+	</connections>
+</devicedata>

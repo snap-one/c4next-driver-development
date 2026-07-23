@@ -1,5 +1,5 @@
 function OnDriverInit ()
-	C4:AddVariable("RANDOM_NUMBER", 1, "NUMBER") -- Number variable to hold the random number generated
+	C4:AddVariable("RANDOM_NUMBER", 1, "NUMBER")
 end
 
 function GenerateRandomNumber()

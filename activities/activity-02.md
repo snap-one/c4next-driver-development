@@ -1,17 +1,18 @@
 ## Set Up the Project and Package the Driver
-1.	Create a new project in OvrC. Place the controller in a new room named Equipment Rack.
-2.	Add the touchscreen using the Discovered tab.
-3.	In Visual Studio Code press Ctlr - ` to open the integrated terminal.
-4.	In the integrated terminal, enter the virtual environment: source .venv/bin/activate
+1.	In Visual Studio Code press Ctlr - ` to open the integrated terminal.
+4.	In the integrated terminal, enter the virtual environment: 
+```sh
+source .venv/bin/activate
+```
 5.	Change the directory by typing cd random-number-generator and pressing Enter.
 6.	Package the driver: 
-```
+```sh
 python [path to the driver packager folder]/dp3/driverpackager.py ./ ./../compiled random_number.c4zproj
 ```
 
 or for Windows
 
-```
+```sh
 python [path to the driver packager folder]\dp3\driverpackager.py .\ .\..\compiled random_number.c4zproj
 ```
 7.	In Composer Pro, click **Driver > Add or Update Driver or Agent**.

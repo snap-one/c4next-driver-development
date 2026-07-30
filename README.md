@@ -32,27 +32,31 @@ d.	Activate by logging in with your Github account
         ```
         brew install python@3.11
         ```
-4.	Create a virtual environment: 
+4. If wanting to encrypt drivers (optional) then install swig and openssl:
+    ```
+    brew install swig openssl
+    ```
+5.	Create a virtual environment: 
     ```
     python -m venv .venv
     ```
-5.	Activate your virtual environment: 
+6.	Activate your virtual environment: 
     ```
     source .venv/bin/activate
     ```
-6.	Install dependency of lxml: 
+7.	Install dependency of lxml: 
     ```
     pip install lxml
     ```
-7.	Install optional dependency of M2Crypto (for encryptying drivers): 
+8.	Install optional dependency of M2Crypto (for encryptying drivers): 
 ```
-env LDFLAGS="-L$(brew --prefix openssl@1.1)/lib" CPPFLAGS="-I$(brew --prefix openssl@1.1)/include" SWIG_FEATURES="-modern" pip install m2crypto --no-binary :all: --no-deps –verbose
+env LDFLAGS="-L$(brew --prefix openssl)/lib" CFLAGS="-I$(brew --prefix openssl)/include" SWIG_FEATURES="-cpperraswarn -includeall -I$(brew --prefix openssl)/include" pip install m2crypto
 ```
-8.	Change directories: 
+9.	Change directories: 
 ```
 cd test-compile
 ```
-9.	Run the test compile for a driver: 
+10.	Run the test compile for a driver: 
 ```
 python ../drivers-driverpackager-master/dp3/driverpackager.py ./ ./../compiled/ test_compile.c4zproj
 ```

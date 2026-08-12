@@ -65,7 +65,12 @@ python ../drivers-driverpackager-master/dp3/driverpackager.py ./ ./../compiled/ 
 #### Windows
 
 1.	Run PowerShell as administrator
-2.	Set the policy to allow for running python scripts
+2.	Check if python is installed:
+```
+python --version
+```
+3. If not installed, install it through the Windows Store popup, and follow the defaults until you get back to the command line, at which point `python --version` should respond with `Python 3.14.7` or later.
+4.	Set the policy to allow for running python scripts
 ```
 Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
 ```

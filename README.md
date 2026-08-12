@@ -6,10 +6,10 @@
 
 1. GitHub
 2.	Visual Studio Code
-    a.	Download and install from https://code.visualstudio.com
-    b.	Launch Visual Studio Code
-    c.	Install the Github Copilot extension
-    d.	Activate by logging in with your Github account
+    1.	Download and install from https://code.visualstudio.com
+    2.	Launch Visual Studio Code
+    3.	Install the Github Copilot extension
+    4.	Activate by logging in with your Github account
 3.	Download (using the <> Code button) and unzip https://github.com/snap-one/c4next-driver-development-main.
 4.	Download and unzip https://github.com/snap-one/drivers-driverpackager-master and place in the c4next-driver-development-main folder.
 5.	Open the c4next-driver-development-main folder in Visual Studio Code.

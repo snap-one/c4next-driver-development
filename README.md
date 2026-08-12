@@ -18,7 +18,7 @@
 
 #### Mac
 
-1.	Open the Terminal application.
+1.	Open the Terminal application and change directory to the c4next-driver-development-main folder.
 2.	Find out which python environment: 
     ``` 
     python --version
@@ -64,7 +64,7 @@ python ../drivers-driverpackager-master/dp3/driverpackager.py ./ ./../compiled/ 
 	
 #### Windows
 
-1.	Run PowerShell as administrator
+1.	Run PowerShell as administrator and change directory to the c4next-driver-development-main folder.
 2.	Check if python is installed:
 ```
 python --version

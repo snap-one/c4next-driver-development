@@ -1,9 +1,9 @@
 -- ========================================
 -- CONSTANTS
 -- ========================================
+KEYPAD_BINDING_ID = 5001    -- must match the id of the proxy <connection> in driver.xml
 NETWORK_BINDING_ID = 6001   -- must match the <id> of the network <connection> in driver.xml
-KEYPAD_BINDING_ID  = 5001 -- must match the id of the proxy <connection> in driver.xml
-NETWORK_PORT = 1000   -- must match the <number> of the network <port> in driver.xml
+NETWORK_PORT = 1000         -- must match the <number> of the network <port> in driver.xml
 
 -- Buffer for reassembling newline-delimited messages from the ESP32.
 -- TCP doesn't guarantee that one Send on the device arrives as one
@@ -18,19 +18,7 @@ function OnDriverInit()
 end
 
 function OnDriverLateInit()
-	local buttonName = Properties["Button Name"]
-
-	C4:SendToProxy(KEYPAD_BINDING_ID, "NEW_KEYPAD_BUTTON", {
-		SLOTS = 6,
-		ENGRAVING = "",
-		BUTTON_ID = 0,
-		NAME = buttonName,
-		ON_COLOR = "000000",
-		OFF_COLOR = "000fff",
-		BUTTON_BEHAVIOR = 0,
-		LED_BEHAVIOR = 2
-	}, "NOTIFY", false)
-
+	
 	-- No manual connection needed here: the network connection in driver.xml
 	-- has auto_connect/keep_connection set, so Director opens and maintains
 	-- the TCP session to whatever IP is bound in Composer Pro's
@@ -43,26 +31,6 @@ end
 -- ========================================
 function OnPropertyChanged(sProperty)
 	print("Property Changed: " .. sProperty .. " to " .. tostring(Properties[sProperty]))
-
-	if (sProperty == "Button Name") then
-		SendToESP("TEXT:" .. Properties["Button Name"])
-	local buttonName = Properties["Button Name"]
-
-	C4:SendToProxy(KEYPAD_BINDING_ID, "KEYPAD_BUTTON_INFO", {
-		BUTTON_ID = 0,
-		NAME = buttonName
-	}, "NOTIFY", false)
-
-
-	elseif (sProperty == "Brightness") then
-		SendToESP("BRIGHT:" .. tostring(Properties["Brightness"]))
-
-	elseif (sProperty == "Background Color") then
-		SendToESP("BG:" .. RGB2HEX(Properties["Background Color"]))
-
-	elseif (sProperty == "Text Color") then
-		SendToESP("TEXTCOL:" .. RGB2HEX(Properties["Text Color"]))
-	end
 end
 
 
@@ -77,12 +45,6 @@ function ReceivedFromProxy(idBinding, strCommand, tParams)
 		for ParamName, ParamValue in pairs(tParams) do
 			print(ParamName, ParamValue)
 		end
-
-		if (strCommand == "KEYPAD_BUTTON_INFO" and tParams.NAME ~= nil) then
-			print("updating property")
-			C4:UpdateProperty("Button Name", tParams.NAME)
-			OnPropertyChanged("Button Name")
-		end
 	end
 end
 
@@ -96,7 +58,7 @@ function OnConnectionStatusChanged(idBinding, strClass, bIsConnected)
 	if (bIsConnected) then
 		C4:DebugLog("ESP32 button connected")
 		NetRxBuffer = ""
-		SyncDeviceState()   -- push current properties so the device matches Composer after (re)connect
+		SyncDeviceState() -- push current properties so the device matches Composer after (re)connect
 	else
 		C4:DebugLog("ESP32 button disconnected")
 	end
@@ -131,10 +93,9 @@ function HandleLineFromESP(strLine)
 		HandleTap(data.count)
 	end
 
-	if (data.event == "press" or data.event == "release") then 
+	if (data.event == "press" or data.event == "release") then
 		HandlePressRelease(data.event)
 	end
-
 end
 
 function SendToESP(strLine)
@@ -145,18 +106,11 @@ end
 -- (re)connects, so display state always matches what's set in Composer.
 function SyncDeviceState()
 	SendToESP("TEXT:" .. tostring(Properties["Button Name"]))
-	SendToESP("BRIGHT:" .. tostring(Properties["Brightness"]))
-	SendToESP("BG:" .. RGB2HEX(Properties["Background Color"]))
-	SendToESP("TEXTCOL:" .. RGB2HEX(Properties["Text Color"]))
 end
 
 
 function HandleTap(count)
 	C4:DebugLog("Button tapped " .. tostring(count) .. " times")
-	C4:SendToProxy(KEYPAD_BINDING_ID, "CLICK_COUNT", {
-		COUNT = count,
-		BUTTON_ID = 0
-	})
 end
 
 function HandlePressRelease(event)
@@ -165,10 +119,6 @@ function HandlePressRelease(event)
 		action = 1
 	end
 	C4:DebugLog("Button " .. tostring(event))
-	C4:SendToProxy(KEYPAD_BINDING_ID, "KEYPAD_BUTTON_ACTION", {
-		ACTION = action,
-		BUTTON_ID = 0
-	})
 end
 
 -- ========================================

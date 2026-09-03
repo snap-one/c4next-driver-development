@@ -3,7 +3,7 @@ function OnDriverInit ()
 end
 
 function GenerateRandomNumber()
-	local maxNumber = 20
+	local maxNumber = tonumber(Properties['Max Number']) or 2
 	local randomNumber = math.random(1, maxNumber)
 	C4:SetVariable("RANDOM_NUMBER", randomNumber)
 	C4:FireEvent('RandomNumberGenerated')

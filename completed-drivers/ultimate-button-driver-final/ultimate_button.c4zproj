@@ -1,0 +1,10 @@
+<Driver type="c4z" name="ultimate_button" squishLua="false">
+<Items>
+	<Item type="dir" name="www" recurse="true"/>
+
+	<Item type="file" name="driver.xml" c4zDir = ""/>
+	<Item type="file" name="driver.lua" c4zDir = ""/>
+
+</Items>
+</Driver>
+ 

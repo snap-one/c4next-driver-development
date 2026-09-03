@@ -6,6 +6,7 @@ function GenerateRandomNumber()
 	local maxNumber = 20
 	local randomNumber = math.random(1, maxNumber)
 	C4:SetVariable("RANDOM_NUMBER", randomNumber)
+	C4:FireEvent('RandomNumberGenerated')
 	print("Generated Random Number: " .. randomNumber)
 end
 

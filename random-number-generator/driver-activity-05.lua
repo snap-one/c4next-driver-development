@@ -11,7 +11,7 @@ function GenerateRandomNumber()
 end
 
 function ExecuteCommand (strCommand, tParams)
-	if strCommand == "GenerateNewNumber" then
+	if strCommand == "GenerateNewNumber" or (strCommand == "LUA_ACTION" and tParams.ACTION == "GenerateNewNumber") then
 		GenerateRandomNumber()
 	end
 end

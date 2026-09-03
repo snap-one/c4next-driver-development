@@ -1,42 +1,15 @@
-## Create an Action
+## Should I Make a Custom Driver?
 
-### driver.xml - Create an Action
-1.	Add the code in color to the driver.xml file:
+```mermaid
+flowchart TD
+    A["Is there already a driver?"] -->|Yes| A1["Use it."]
+    A -->|No| B["Is replacing the device cheaper than a day of labor?"]
+    B -->|Yes| B1["Replace the device."]
+    B -->|No| C["Will I use this driver again?"]
+    C -->|No| C1["Probably replace the device."]
+    C -->|Yes| D["Is the protocol documented?"]
+    D -->|No| D1["Run away."]
+    D -->|Yes| E["Am I willing to support this for years?"]
+    E -->|No| E1["Replace the device."]
+    E -->|Yes| E2["Build the driver."]
 ```
-<config>
-    <script file="driver.lua"/>
-    <documentation file = "www/documentation.rtf"></documentation>
-```
-```xml
-    <actions>
-        <action>
-            <name>Generate New Number</name>
-            <command>GenerateNewNumber</command>
-            <params/>
-        </action>
-    </actions>
-```
-```
-    <properties>
-```
-2.	Save the file.
-
-### driver.lua - Create an Action
-3.	Modify the Executecommand function in the driver.lua file:
-```lua
-function ExecuteCommand (strCommand, tParams)
-    if strCommand == "GenerateNewNumber" or (strCommand == "LUA_ACTION" and tParams.ACTION == "GenerateNewNumber") then 
-        GenerateRandomNumber()
-    end
-end
-```
-4.	Save the file.
-
-### Compile the driver
-5.	Use the arrow-up key to repeat the previous instructions to compile the driver.
-6.	In Composer Pro, click **Driver > Add or Update Driver or Agent**.
-7.	Choose the packaged driver in the compiled folder.
-
-### Test the driver in Composer Pro
-8.	Use the action in the driver to test if the event fires.
-

@@ -18,7 +18,19 @@ function OnDriverInit()
 end
 
 function OnDriverLateInit()
-	
+	local buttonName = Properties["Button Name"]
+
+	C4:SendToProxy(PROXY_BINDING_ID, "NEW_KEYPAD_BUTTON", {
+		SLOTS = 6,
+		ENGRAVING = "",
+		BUTTON_ID = 0,
+		NAME = buttonName,
+		ON_COLOR = "000000",
+		OFF_COLOR = "000fff",
+		BUTTON_BEHAVIOR = 0,
+		LED_BEHAVIOR = 2
+	}, "NOTIFY", false)
+
 	-- No manual connection needed here: the network connection in driver.xml
 	-- has auto_connect/keep_connection set, so Director opens and maintains
 	-- the TCP session to whatever IP is bound in Composer Pro's
@@ -31,6 +43,10 @@ end
 -- ========================================
 function OnPropertyChanged(sProperty)
 	print("Property Changed: " .. sProperty .. " to " .. tostring(Properties[sProperty]))
+
+	if (sProperty == "Button Name") then
+		SendToESP("TEXT:" .. Properties["Button Name"])
+	end
 end
 
 
@@ -44,6 +60,13 @@ function ReceivedFromProxy(idBinding, strCommand, tParams)
 	if (tParams ~= nil) then
 		for ParamName, ParamValue in pairs(tParams) do
 			print(ParamName, ParamValue)
+		end
+
+		if (strCommand == "KEYPAD_BUTTON_INFO" and tParams.NAME ~= nil) then
+			print("updating property")
+
+			C4:UpdateProperty("Button Name", tParams.NAME)
+			OnPropertyChanged("Button Name")
 		end
 	end
 end

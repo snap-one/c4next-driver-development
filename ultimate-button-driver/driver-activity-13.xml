@@ -19,6 +19,29 @@
 				<type>STRING</type>
 				<readonly>true</readonly>
 			</property>
+			<property>
+				<name>Brightness</name>
+				<default>200</default>
+				<type>RANGED_INTEGER</type>
+				<minimum>0</minimum>
+				<maximum>255</maximum>
+				<readonly>false</readonly>
+				<tooltip>Set the brightness level of the button (0-255).</tooltip>
+			</property>
+			<property>
+				<name>Background Color</name>
+				<default>255,255,255</default>
+				<type>COLOR_SELECTOR</type>
+				<readonly>false</readonly>
+				<tooltip>Set the color of the button using the color selector.</tooltip>
+			</property>
+			<property>
+				<name>Text Color</name>
+				<default>0,0,0</default>
+				<type>COLOR_SELECTOR</type>
+				<readonly>false</readonly>
+				<tooltip>Set the color of the button using the color selector.</tooltip>
+			</property>
 		</properties>
 		<commands>
 		</commands>

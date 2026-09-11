@@ -1,7 +1,7 @@
 -- ========================================
 -- CONSTANTS
 -- ========================================
-KEYPAD_BINDING_ID = 5001    -- must match the id of the proxy <connection> in driver.xml
+PROXY_BINDING_ID = 5001    -- must match the id of the proxy <connection> in driver.xml
 NETWORK_BINDING_ID = 6001   -- must match the <id> of the network <connection> in driver.xml
 NETWORK_PORT = 1000         -- must match the <number> of the network <port> in driver.xml
 
@@ -20,7 +20,7 @@ end
 function OnDriverLateInit()
 	local buttonName = Properties["Button Name"]
 
-	C4:SendToProxy(KEYPAD_BINDING_ID, "NEW_KEYPAD_BUTTON", {
+	C4:SendToProxy(PROXY_BINDING_ID, "NEW_KEYPAD_BUTTON", {
 		SLOTS = 6,
 		ENGRAVING = "",
 		BUTTON_ID = 0,
@@ -43,10 +43,6 @@ end
 -- ========================================
 function OnPropertyChanged(sProperty)
 	print("Property Changed: " .. sProperty .. " to " .. tostring(Properties[sProperty]))
-
-	if (sProperty == "Button Name") then
-		SendToESP("TEXT:" .. Properties["Button Name"])
-	end
 end
 
 
@@ -60,13 +56,6 @@ function ReceivedFromProxy(idBinding, strCommand, tParams)
 	if (tParams ~= nil) then
 		for ParamName, ParamValue in pairs(tParams) do
 			print(ParamName, ParamValue)
-		end
-
-		if (strCommand == "KEYPAD_BUTTON_INFO" and tParams.NAME ~= nil) then
-			print("updating property")
-
-			C4:UpdateProperty("Button Name", tParams.NAME)
-			OnPropertyChanged("Button Name")
 		end
 	end
 end

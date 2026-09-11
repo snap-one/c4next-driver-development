@@ -1,7 +1,7 @@
 ## Add a Property
 
-### driver.xml – Add a Property
-1.	Add the code displayed in color to the driver.xml file:
+### `driver.xml` – Add a Property
+1.	Add the code displayed in color to the `driver.xml` file:
 ```
 <config>
     <script file="driver.lua"/>
@@ -24,8 +24,8 @@
 ```
 2.	Save the file.
 
-### driver.lua – Use the Property Value
-3.	Modify the GenerateRandomNumber function in the driver.lua file:
+### `driver.lua` – Use the Property Value
+3.	Modify the `GenerateRandomNumber` function in the `driver.lua` file:
 ```lua
 function GenerateRandomNumber()
     local maxNumber = tonumber(Properties['Max Number']) or 2
@@ -39,9 +39,9 @@ end
 
 ### Compile the Driver
 5.	Use the arrow-up key to repeat the previous instructions to compile the driver.
-6.	In Composer Pro, click **Driver > Add or Update Driver or Agent**.
-7.	Choose the packaged driver in the compiled folder.
+6.	In **Composer Pro**, click **Driver > Add or Update Driver or Agent**.
+7.	Choose the packaged driver in the **compiled** folder.
 
 ### Test the Driver in Composer Pro
-8.	Change the property in the driver to a smaller number, such as 10.
+8.	Change the property in the driver to a smaller number, such as `10`.
 9.	Test several times by pressing the scenario button.

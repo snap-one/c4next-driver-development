@@ -19,29 +19,6 @@
 				<type>STRING</type>
 				<readonly>true</readonly>
 			</property>
-			<property>
-				<name>Brightness</name>
-				<default>200</default>
-				<type>RANGED_INTEGER</type>
-				<minimum>0</minimum>
-				<maximum>255</maximum>
-				<readonly>false</readonly>
-				<tooltip>Set the brightness level of the button (0-255).</tooltip>
-			</property>
-			<property>
-				<name>Background Color</name>
-				<default>255,255,255</default>
-				<type>COLOR_SELECTOR</type>
-				<readonly>false</readonly>
-				<tooltip>Set the color of the button using the color selector.</tooltip>
-			</property>
-			<property>
-				<name>Text Color</name>
-				<default>0,0,0</default>
-				<type>COLOR_SELECTOR</type>
-				<readonly>false</readonly>
-				<tooltip>Set the color of the button using the color selector.</tooltip>
-			</property>
 		</properties>
 		<commands>
 		</commands>
@@ -94,29 +71,6 @@
 				<class>
 					<autobind>True</autobind>
 					<classname>KEYPAD</classname>
-				</class>
-			</classes>
-		</connection>
-		<connection>
-			<id>6001</id>
-			<facing>1</facing>
-			<connectionname>Network</connectionname>
-			<type>4</type>
-			<consumer>True</consumer>
-			<audiosource>False</audiosource>
-			<videosource>False</videosource>
-			<linelevel>True</linelevel>
-			<classes>
-				<class>
-					<classname>TCP</classname>
-					<ports>
-						<port>
-							<number>1000</number>
-							<auto_connect>True</auto_connect>
-							<monitor_connection>True</monitor_connection>
-							<keep_connection>True</keep_connection>
-						</port>
-					</ports>
 				</class>
 			</classes>
 		</connection>

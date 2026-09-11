@@ -1,7 +1,7 @@
 -- ========================================
 -- CONSTANTS
 -- ========================================
-KEYPAD_BINDING_ID = 5001    -- must match the id of the proxy <connection> in driver.xml
+PROXY_BINDING_ID = 5001    -- must match the id of the proxy <connection> in driver.xml
 NETWORK_BINDING_ID = 6001   -- must match the <id> of the network <connection> in driver.xml
 NETWORK_PORT = 1000         -- must match the <number> of the network <port> in driver.xml
 
@@ -20,7 +20,7 @@ end
 function OnDriverLateInit()
 	local buttonName = Properties["Button Name"]
 
-	C4:SendToProxy(KEYPAD_BINDING_ID, "NEW_KEYPAD_BUTTON", {
+	C4:SendToProxy(PROXY_BINDING_ID, "NEW_KEYPAD_BUTTON", {
 		SLOTS = 6,
 		ENGRAVING = "",
 		BUTTON_ID = 0,
@@ -65,7 +65,7 @@ function ReceivedFromProxy(idBinding, strCommand, tParams)
 		if (strCommand == "KEYPAD_BUTTON_INFO" and tParams.NAME ~= nil) then
 			print("updating property")
 
-			C4:SendToProxy(KEYPAD_BINDING_ID, "KEYPAD_BUTTON_INFO", {
+			C4:SendToProxy(PROXY_BINDING_ID, "KEYPAD_BUTTON_INFO", {
 				BUTTON_ID = 0,
 				NAME = tParams.NAME
 			}, "NOTIFY", false)
@@ -139,7 +139,7 @@ end
 
 function HandleTap(count)
 	C4:DebugLog("Button tapped " .. tostring(count) .. " times")
-	C4:SendToProxy(KEYPAD_BINDING_ID, "CLICK_COUNT", {
+	C4:SendToProxy(PROXY_BINDING_ID, "CLICK_COUNT", {
 		COUNT = count,
 		BUTTON_ID = 0
 	})
@@ -151,7 +151,7 @@ function HandlePressRelease(event)
 		action = 1
 	end
 	C4:DebugLog("Button " .. tostring(event))
-	C4:SendToProxy(KEYPAD_BINDING_ID, "KEYPAD_BUTTON_ACTION", {
+	C4:SendToProxy(PROXY_BINDING_ID, "KEYPAD_BUTTON_ACTION", {
 		ACTION = action,
 		BUTTON_ID = 0
 	})

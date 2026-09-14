@@ -28,7 +28,7 @@
 5.	Modify the `OnDriverInit` function in the `driver.lua` file:
 ```lua
 function OnDriverInit ()
-    C4:AddVariable("RANDOM_NUMBER", 1, "NUMBER"
+    C4:AddVariable("RANDOM_NUMBER", 1, "NUMBER")
 end
 ```
 

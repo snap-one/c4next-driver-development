@@ -1,5 +1,5 @@
 ## Set Up the Project and Package the Driver
-1.	In **Visual Studio Code** press **Ctlr - `** to open the **integrated terminal**.
+1.	In **Visual Studio Code** press **Ctrl - `** to open the **integrated terminal**.
 2.	In the **integrated terminal**, enter the virtual environment:
 ```sh
 source .venv/bin/activate

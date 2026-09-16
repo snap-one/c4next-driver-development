@@ -1,4 +1,7 @@
 ## Set Up the Project and Package the Driver
+
+In this activity, you will get the project set up and do an initial compile of the driver so that you can repeat the process as you develop.
+
 1.	In **Visual Studio Code** press **Ctrl - `** to open the **integrated terminal**.
 2.	In the **integrated terminal**, enter the virtual environment:
 ```sh

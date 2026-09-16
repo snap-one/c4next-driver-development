@@ -1,6 +1,6 @@
 ## Send Events from the Ultimate Button device to the Keypad Proxy
 
-This activity sends device state and button events from the protocol side to the Control4 keypad proxy. The driver forwards name updates, tap counts, and press or release actions so Composer can use them for keypad behavior and programming.
+This activity sends device state and button events from the protocol to the Control4 keypad proxy. The driver forwards name updates, tap counts, and press or release actions so Composer can use them for keypad behavior and programming.
 
 ### `driver.lua` - Send Proxy Notifications
 1. In `ReceivedFromProxy`, notify the keypad proxy when a button name is received:

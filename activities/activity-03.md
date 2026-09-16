@@ -1,5 +1,8 @@
 ## Create an Event
 
+Even though the variable changing is an event that could be used, it has a major problem: If the number generated is the same, the event will not be triggered since the variable did not change. In this activity you will add an event named `RandomNumberGenerated` and then fire the event using the `C4:FireEvent` function.
+
+
 ### `driver.xml` - Create an Event
 1.	Add the code displayed in color to the `driver.xml` file:
 ```

@@ -7,7 +7,7 @@ flowchart TD
     B -->|Yes| B1["Replace the device."]
     B -->|No| C["Will I use this driver again?"]
     C -->|No| C1["Probably replace the device."]
-    C -->|Yes| D["Is the protocol documented?"]
+    C -->|Yes| D["Is the device protocol documented?"]
     D -->|No| D1["Run away."]
     D -->|Yes| E["Am I willing to support this for years?"]
     E -->|No| E1["Replace the device."]

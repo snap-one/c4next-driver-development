@@ -1,5 +1,6 @@
 ## Create a Command, a Variable, and a Random Number
 
+For the first iteration, you want to create a command for your driver that will generate a new random number. To do this you must first define a command in the `driver.xml` file. Then in the `driver.lua` file you will add a new variable named `RANDOM_NUMBER` where you can store the newly generated number. Finally, you will use the `ExecuteCommand` function that is called by Director whenever any command is received for the driver. When `GenerateNewNumber` command is received by this function, you will generate a new random number and assign it to the `RANDOM_NUMBER` variable using the `GenerateRandomNumber` function.
 
 ### `driver.xml` - Create a Command
 1.	In the `c4next-driver-development` folder, open the `random-number-generator/driver.xml` file.

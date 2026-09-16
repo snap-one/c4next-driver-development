@@ -1,5 +1,7 @@
 ## Add a Property
 
+Depending on the circumstances, the range of numbers used to generate a random number may need to be different than 20. In this activity you will add a property named `Max Number` that can be set to specify the range of numbers.
+
 ### `driver.xml` – Add a Property
 1.	Add the code displayed in color to the `driver.xml` file:
 ```

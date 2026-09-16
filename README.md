@@ -11,15 +11,16 @@
     3.	Install the Github Copilot extension
     4.	Activate by logging in with your Github account
 3.	Download (using the <> Code button > Download Zip) and unzip the repo at https://github.com/snap-one/c4next-driver-development.
-4.	Download (using the <> Code button > Download Zip) and unzip https://github.com/snap-one/drivers-driverpackager and place in the c4next-driver-development-main folder.
-5.	Open the c4next-driver-development-main folder in Visual Studio Code.
+4.	Download (using the <> Code button > Download Zip) and unzip https://github.com/snap-one/drivers-driverpackager and place in the `c4next-driver-development-main` folder.
+5.	Open the `c4next-driver-development-main` folder in Visual Studio Code.
 6.	Open the README.md file for further instructions that are specific to Mac or Windows.
 
 
 #### Mac
 
-1.	Open the Terminal application and change directory (`cd`) to the c4next-driver-development-main folder.
-2.	Find out which python environment: 
+1.	Open the Terminal application.
+2.  Change directory (`cd`) to the c4next-driver-development-main folder.
+3.	Find out which python environment: 
     ```sh 
     python --version
     ```
@@ -27,17 +28,21 @@
     ```sh
     python3 --version 
     ```
-3.	If not version 3.11, do the following:
+4.	If not version 3.11, do the following:
     1. Install homebrew: https://brew.sh
     2. Open a new terminal window and install python version 3.11: 
         ```sh
         brew install python@3.11
         ```
-4. If wanting to encrypt drivers (optional) then install swig and openssl:
+    3. You may have to add the path to this version in your terminal configuration:
+        ```sh
+        echo 'export PATH="$(brew --prefix)/opt/python@3.11/libexec/bin:$PATH"' >> ~/.zshrc
+        ```
+5. If wanting to encrypt drivers (optional) then install swig and openssl:
     ```sh
     brew install swig openssl
     ```
-5.	Create a virtual environment: 
+6.	Create a virtual environment: 
     ```sh
     python -m venv .venv
     ```
@@ -64,37 +69,39 @@ python ../drivers-driverpackager-master/dp3/driverpackager.py ./ ./../compiled/ 
 	
 #### Windows
 
-1.	Run PowerShell as administrator and change directory (`cd`) to the c4next-driver-development-main folder.
-2.	Check if python is installed:
+1.	Run PowerShell as administrator.
+2. Change directory (`cd`) to the c4next-driver-development-main folder.
+3.	Check if python is installed:
 ```sh
 python --version
 ```
-3. If not installed, install it through the Windows Store popup, and follow the defaults until you get back to the command line, at which point `python --version` should respond with `Python 3.14.7` or later.
-4.	Set the policy to allow for running python scripts
+4. If not installed, install it through the Windows Store popup, and follow the defaults until you get back to the command line, at which point `python --version` should respond with `Python 3.14.7` or later.
+5.	Set the policy to allow for running python scripts
 ```sh
 Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
 ```
-5.	Create a virtual environment: 
+6.	Create a virtual environment: 
 ```sh
 python -m venv .venv
 ```
-6.	Activate your virtual environment: 
+7.	Activate your virtual environment: 
 ```sh
 .venv\Scripts\activate
 ```
-7.	Install dependency of lxml: 
+8.	Install dependency of lxml: 
 ```sh
 pip install lxml
 ```
-8.	Install optional dependency of M2Crypto (for encryptying drivers): 
+9.	Install optional dependency of M2Crypto (for encryptying drivers): 
 ```sh
 pip install M2Crypto
 ```
-9.	Change directories: 
+10.	Change directories: 
 ```sh
 cd test-compile
 ```
-10.	Run the test compile for a driver: 
+11.	Run the test compile for a driver: 
 ```sh
 python ..\drivers-driverpackager-master\dp3\driverpackager.py .\ .\..\compiled test_compile.c4zproj
 ```
+12. Verify the driver was created by looking in the `compiled` folder.

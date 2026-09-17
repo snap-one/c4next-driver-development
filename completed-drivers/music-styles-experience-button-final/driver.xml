@@ -89,7 +89,7 @@
 	<control>lua_gen</control>
 	<driver>DriverWorks</driver>
 	<copyright>Copyright 2021 Wirepath Home Systems, LLC. All Rights Reserved.</copyright>
-	<manufacturer>Control4</manufacturer>
+	<manufacturer>C4NEXT</manufacturer>
 	<config>
 		<script file="driver.lua"/>
 		<documentation file = "www/documentation.rtf"></documentation>

@@ -2,8 +2,8 @@
 
 This activity changes the driver from a basic driver with an unconfigured proxy into a driver that exposes an Ultimate Button through the Control4 keypad proxy. The XML declares the proxy, its capabilities, and its `KEYPAD` connection. The Lua code creates the button when the driver starts.
 
-### `driver.xml` - Configure the Keypad Proxy
-1. In the `driver.xml` file, replace the existing proxy element:
+### **driver.xml** - Configure the Keypad Proxy
+1. In the **driver.xml** file, replace the existing proxy element:
 ```xml
 <proxy name="ultimate_button">Ultimate Button</proxy>
 ```
@@ -61,8 +61,8 @@ The connection ID `5001` matches the proxy binding ID and will be used by the Lu
 
 4. Save the file.
 
-### `driver.lua` - Create the Keypad Button
-5. Add the keypad binding constant with the other constants at the top of the `driver.lua` file:
+### **driver.lua** - Create the Keypad Button
+5. Add the keypad binding constant with the other constants at the top of the **driver.lua** file:
 ```lua
 PROXY_BINDING_ID = 5001 -- must match the id of the proxy <connection> in driver.xml
 ```
@@ -90,11 +90,14 @@ end
 7. Save the file.
 
 ### Compile the Driver
-8. Use the **arrow-up** key to repeat the previous instructions to compile the driver.
+8.	In the **integrated terminal**, package the driver:
+```
+python ./../driverpackager/dp3/driverpackager.py ./ ./../compiled ultimate_button.c4zproj
+```
 9. In **Composer Pro**, click **Driver > Add or Update Driver or Agent**.
 10. Choose the packaged driver in the **compiled** folder.
 
 ### View the Driver in Composer Pro
 11. Add the driver to any room in the project.
-12. View the configuration options in the **Properties** and **Advanced Properties**. What is available through the proxy?
+12. View the configuration options in **Properties** and **Advanced Properties**. What is available through the proxy?
 13. Look at the available options in **Programming** for the device as well. What programming is available through the proxy?

@@ -2,8 +2,8 @@
 
 Depending on the circumstances, the range of numbers used to generate a random number may need to be different than 20. In this activity you will add a property named `Max Number` that can be set to specify the range of numbers.
 
-### `driver.xml` – Add a Property
-1.	Add the code displayed in color to the `driver.xml` file:
+### **driver.xml** – Add a Property
+1.	Add the code displayed in color to the **driver.xml** file:
 ```
 <config>
     <script file="driver.lua"/>
@@ -26,8 +26,8 @@ Depending on the circumstances, the range of numbers used to generate a random n
 ```
 2.	Save the file.
 
-### `driver.lua` – Use the Property Value
-3.	Modify the `GenerateRandomNumber` function in the `driver.lua` file:
+### **driver.lua** – Use the Property Value
+3.	Modify the `GenerateRandomNumber` function in the **driver.lua** file:
 ```lua
 function GenerateRandomNumber()
     local maxNumber = tonumber(Properties['Max Number']) or 2

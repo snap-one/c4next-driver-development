@@ -1,8 +1,8 @@
 ## Create a Command, a Variable, and a Random Number
 
-For the first iteration, you want to create a command for your driver that will generate a new random number. To do this you must first define a command in the `driver.xml` file. Then in the `driver.lua` file you will add a new variable named `RANDOM_NUMBER` where you can store the newly generated number. Finally, you will use the `ExecuteCommand` function that is called by Director whenever any command is received for the driver. When `GenerateNewNumber` command is received by this function, you will generate a new random number and assign it to the `RANDOM_NUMBER` variable using the `GenerateRandomNumber` function.
+For the first iteration, you want to create a command for your driver that will generate a new random number. To do this you must first define a command in the **driver.xml** file. Then in the **driver.lua** file you will add a new variable named `RANDOM_NUMBER` where you can store the newly generated number. Finally, you will use the `ExecuteCommand` function that is called by Director whenever any command is received for the driver. When `GenerateNewNumber` command is received by this function, you will generate a new random number and assign it to the `RANDOM_NUMBER` variable using the `GenerateRandomNumber` function.
 
-### `driver.xml` - Create a Command
+### **driver.xml** - Create a Command
 1.	In the `c4next-driver-development` folder, open the `random-number-generator/driver.xml` file.
 2.	Add the code displayed in color to the driver.xml file:
 ```
@@ -24,17 +24,17 @@ For the first iteration, you want to create a command for your driver that will 
 ```
 3.	Save the file.
 
-### `driver.lua` – Add a Variable
+### **driver.lua** – Add a Variable
 4.	In the `c4next-driver-development` folder, open the `random-number-generator/driver.lua` file.
-5.	Modify the `OnDriverInit` function in the `driver.lua` file:
+5.	Modify the `OnDriverInit` function in the **driver.lua** file:
 ```lua
 function OnDriverInit ()
     C4:AddVariable("RANDOM_NUMBER", 1, "NUMBER")
 end
 ```
 
-### `driver.lua` – Code the Command
-6.	Modify the `ExecuteCommand` function in the `driver.lua` file:
+### **driver.lua** – Code the Command
+6.	Modify the `ExecuteCommand` function in the **driver.lua** file:
 ```lua
 function ExecuteCommand (strCommand, tParams)
     if strCommand == "GenerateNewNumber" then
@@ -43,8 +43,8 @@ function ExecuteCommand (strCommand, tParams)
 end
 ```
 
-### `driver.lua` – Generate the Random Number
-7.	Modify the `GenerateRandomNumber` function in the `driver.lua` file:
+### **driver.lua** – Generate the Random Number
+7.	Modify the `GenerateRandomNumber` function in the **driver.lua** file:
 ```lua
 function GenerateRandomNumber()
     local maxNumber = 20
@@ -66,7 +66,7 @@ python [path to the driver packager folder]/dp3/driverpackager.py ./ ./../compil
 11.	Choose the packaged driver in the **compiled** folder.
 
 ### Test the Driver in Composer Pro
-12.	Add a **Scenario - Experience Button** driver to the **Equipment Rack**.
+12.	Add a **Scenario - Experience Button** driver to the **Equipment Closet**.
 13.	Program the button so that when it is selected, the **Random Number Generator** will receive a **Device Specific Command** of `GenerateNewNumber`.
 14.	Add the Scenario button to the touchscreen in one of the **Navigation** menus and **Refresh Navigators**.
 15.	Favorite the button to the **Homescreen**.

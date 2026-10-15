@@ -2,8 +2,8 @@
 
 This activity adds a TCP network connection to the Ultimate Button driver. The XML connection gives Director a network binding and port for communicating with the Ultimate Button device. The Lua network handlers are already present, so no Lua logic needs to be added in this activity.
 
-### `driver.xml` - Add the TCP Connection
-1. Add the following connection inside the `<connections>` element in the `driver.xml` file:
+### **driver.xml** - Add the TCP Connection
+1. Add the following connection inside the `<connections>` element in the **driver.xml** file:
 ```xml
 <connection>
     <id>6001</id>
@@ -30,12 +30,12 @@ This activity adds a TCP network connection to the Ultimate Button driver. The X
 </connection>
 ```
 
-The binding ID `6001` must match `NETWORK_BINDING_ID` in `driver.lua`. The port number `1000` must match `NETWORK_PORT`. The connection settings tell Director to open and maintain the TCP connection automatically.
+The binding ID `6001` must match `NETWORK_BINDING_ID` in **driver.lua**. The port number `1000` must match `NETWORK_PORT`. The connection settings tell Director to open and maintain the TCP connection automatically.
 
 2. Save the file.
 
-### `driver.lua` - Review the Network Handlers
-3. Confirm that the `driver.lua` file contains the matching network constants:
+### **driver.lua** - Review the Network Handlers
+3. Confirm that the **driver.lua** file contains the matching network constants:
 ```lua
 NETWORK_BINDING_ID = 6001
 NETWORK_PORT = 1000

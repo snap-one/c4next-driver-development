@@ -4,9 +4,9 @@ In this activity, you will get the project set up and do an initial compile of t
 
 1.	In **Visual Studio Code** press **Ctrl - `** to open the **integrated terminal**.
 2.	In the **integrated terminal**, enter the virtual environment:
-```sh
-source .venv/bin/activate
-```
+    ```sh
+    source .venv/bin/activate
+    ```
 3.	Change the directory by typing `cd random-number-generator` and pressing **Enter**.
 4.	Package the driver:
     #### Mac
@@ -22,4 +22,4 @@ source .venv/bin/activate
 5.	In **Composer Pro**, click **Driver > Add or Update Driver or Agent**.
 6.	Choose the packaged driver in the **compiled** folder.
 7.	When added, go to the **Search** tab and type `random` in the **search bar**.
-8.	Add the **Random Number Generator** driver to the **Equipment Rack** room.
+8.	Add the **Random Number Generator** driver to the **Equipment Closet** room.

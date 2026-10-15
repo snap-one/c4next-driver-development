@@ -1,6 +1,6 @@
 ## View and Compile the Sample Light Driver
 
-### View the `driver.xml` File
+### View the **driver.xml** File
 
 1. Look at the connections and proxy elements in the XML file. Start with the proxy XML. Note both the `proxybindingid` (which will be important in a moment) and the text content of `light_v2`. You can find more information about different proxies in the [Driverworks Proxy Documentation](https://github.com/snap-one/docs-driverworks#driverworks-proxy-documentation).
 
@@ -56,12 +56,17 @@
 	</capabilities>
 ```
 
-### View the `driver.lua` File
+### View the **driver.lua** File
 
 4. View the driver.lua file and look for the `ReceivedFromProxy` function:
 
 
 ### Compile the driver and notice what is included with the proxy.
 
-5. View the **Properties** tab. What do you notice can be configured just through the proxy?
-6. Navigate to **Programming**. What do you notice are added automatically to events and actions.
+5.	In the **integrated terminal**, package the driver:
+```
+python [path to the driver packager folder]/dp3/driverpackager.py ./ ./../compiled sample_light_driver.c4zproj
+```
+
+6. View the **Properties** tab. What do you notice can be configured just through the proxy?
+7. Navigate to **Programming**. What do you notice are added automatically to events and actions.

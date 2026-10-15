@@ -3,8 +3,8 @@
 Even though the variable changing is an event that could be used, it has a major problem: If the number generated is the same, the event will not be triggered since the variable did not change. In this activity you will add an event named `RandomNumberGenerated` and then fire the event using the `C4:FireEvent` function.
 
 
-### `driver.xml` - Create an Event
-1.	Add the code displayed in color to the `driver.xml` file:
+### **driver.xml** - Create an Event
+1.	Add the code displayed in color to the **driver.xml** file:
 ```
     <proxies>
         <proxy name="random_number_generator">Random Number</proxy>
@@ -24,8 +24,8 @@ Even though the variable changing is an event that could be used, it has a major
 ```
 2.	Save the file.
 
-### `driver.lua` - Create an Event
-3.	Modify the `GenerateRandomNumber` function in the `driver.lua` file:
+### **driver.lua** - Create an Event
+3.	Modify the `GenerateRandomNumber` function in the **driver.lua** file:
 ```lua
 function GenerateRandomNumber()
     local maxNumber = 20

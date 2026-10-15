@@ -35,7 +35,7 @@
 		<event>
 			<id>1</id>
 			<name>RandomNumberGenerated</name>
-			<description>Event fired when a new random number is generated</description>
+			<description>When a new random number is generated</description>
 		</event>
 	</events>
 </devicedata>

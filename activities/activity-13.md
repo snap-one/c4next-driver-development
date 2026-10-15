@@ -2,7 +2,7 @@
 
 If you trigger a button action in Composer Pro, you'd think the proxy could command itself. But this isn't the best way. Your device may need to handle and respond to this action which is why the proxy will only notify your driver and then you handle it from there. In this case, we will handle the notification that a button was "pressed" virtually by calling the same functions when the physical button is pressed.
 
-### `driver.lua` - Send Property Changes to the Ultimate Button Device
+### **driver.lua** - Send Property Changes to the Ultimate Button Device
 1. Add the new handling of the proxy  to `ReceivedFromProxy`:
 ```lua
 if (strCommand == "KEYPAD_BUTTON_ACTION") then 

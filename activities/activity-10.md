@@ -2,8 +2,8 @@
 
 This activity adds two-way handling for the button name. When the driver property changes, Lua sends a `TEXT:` command to the Ultimate Button device. When the keypad proxy reports a new name, Lua updates the driver property and sends the same command to the Ultimate Button device.
 
-### `driver.lua` - Send the Name to the Ultimate Button Device
-1. Modify `OnPropertyChanged` in the `driver.lua` file:
+### **driver.lua** - Send the Name to the Ultimate Button Device
+1. Modify `OnPropertyChanged` in the **driver.lua** file:
 ```lua
 function OnPropertyChanged(sProperty)
 	print("Property Changed: " .. sProperty .. " to " .. tostring(Properties[sProperty]))

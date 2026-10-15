@@ -2,8 +2,8 @@
 
 This activity adds Composer properties for brightness, background color, and text color. Each property is declared in XML and handled in Lua so a change is converted into a protocol command for the Ultimate Button device.
 
-### `driver.xml` - Add Button Properties
-1. Add these properties inside the existing `<properties>` element in `driver.xml`:
+### **driver.xml** - Add Button Properties
+1. Add these properties inside the existing `<properties>` element in **driver.xml**:
 ```xml
 <property>
     <name>Brightness</name>
@@ -34,7 +34,7 @@ The brightness property accepts values from 0 through 255. The color selector pr
 
 2. Save the file.
 
-### `driver.lua` - Send Property Changes to the Ultimate Button Device
+### **driver.lua** - Send Property Changes to the Ultimate Button Device
 3. Add the new cases to `OnPropertyChanged`:
 ```lua
 function OnPropertyChanged(sProperty)

@@ -3,4 +3,6 @@ compiled
 experience-button-scenario
 drivers-driverpackager
 drivers-driverpackager-master
+.env
 .venv
+*-working

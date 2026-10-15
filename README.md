@@ -2,6 +2,8 @@
 
 ## From Stuck to Seamless: Creating Custom Control4 Drivers
 
+Welcome to Control4 NEXT! Before your class, it is critical for you to set up your coding environment.
+
 ### Setting Up Your Coding Environment
 
 To setup your environment you will be: 
@@ -104,6 +106,10 @@ To setup your environment you will be:
     deactivate
     ```
 
+18. Create working copies of the **random-number-generator** and the **ultimate-button-driver** folders. This is so Git won't "git" after you for modifying the files from the repository.
+        1. Duplicate the *random-number-generator** folder and rename it to *random-number-generator-working**.
+        2. Duplicate the **ultimate-button-driver** folder and rename it to **ultimate-button-driver-working**.
+
 
 #### Mac
 
@@ -192,7 +198,7 @@ To setup your environment you will be:
 
 14.	Run the test compile for a driver: 
     ```sh
-    python ../../../drivers-driverpackager/dp3/driverpackager.py ./ ./../compiled/ test_compile.c4zproj
+    python ./../../drivers-driverpackager/dp3/driverpackager.py ./ ./../compiled/ test_compile.c4zproj
     ```
 
 15. Verify the driver was created by looking in the **compiled** folder.
@@ -201,3 +207,6 @@ To setup your environment you will be:
     ```sh
     deactivate
     ```
+17. Create working copies of the **random-number-generator** and the **ultimate-button-driver** folders. This is so Git won't "git" after you for modifying the files from the repository.
+        1. Duplicate the *random-number-generator** folder and rename it to *random-number-generator-working**.
+        2. Duplicate the **ultimate-button-driver** folder and rename it to **ultimate-button-driver-working**.

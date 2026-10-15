@@ -63,10 +63,17 @@
 
 ### Compile the driver and notice what is included with the proxy.
 
-5.	In the **integrated terminal**, package the driver:
-```
+5.	In the **integrated terminal**, change the directory by typing `cd sample-light-driver` and pressing **Enter**.
+
+6. Package the driver using the command for your operating system:
+#### macOS
+```sh
 python [path to the driver packager folder]/dp3/driverpackager.py ./ ./../compiled sample_light_driver.c4zproj
 ```
+#### Windows
+```sh
+python [path to the driver packager folder]\dp3\driverpackager.py .\ .\..\compiled sample_light_driver.c4zproj
+```
 
-6. View the **Properties** tab. What do you notice can be configured just through the proxy?
-7. Navigate to **Programming**. What do you notice are added automatically to events and actions.
+7. View the **Properties** tab. What do you notice can be configured just through the proxy?
+8. Navigate to **Programming**. What do you notice are added automatically to events and actions.

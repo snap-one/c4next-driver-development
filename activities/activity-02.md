@@ -56,9 +56,14 @@ end
 8.	Save the file.
 
 ### Compile the Driver
-9.	In the **integrated terminal**, package the driver:
-```
+9.	In the **integrated terminal**, package the driver using the command for your operating system:
+#### macOS
+```sh
 python [path to the driver packager folder]/dp3/driverpackager.py ./ ./../compiled random_number.c4zproj
+```
+#### Windows
+```sh
+python [path to the driver packager folder]\dp3\driverpackager.py .\ .\..\compiled random_number.c4zproj
 ```
 **Tip:** You can just use the **arrow-up** key to repeat the previous instructions each time you need to compile the driver.
 

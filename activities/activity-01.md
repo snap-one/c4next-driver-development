@@ -4,18 +4,26 @@ In this activity, you will get the project set up and do an initial compile of t
 
 1.	In **Visual Studio Code** press **Ctrl - `** to open the **integrated terminal**.
 2.	In the **integrated terminal**, enter the virtual environment:
+    #### macOS
     ```sh
     source .venv/bin/activate
     ```
-3.	Change the directory by typing `cd random-number-generator` and pressing **Enter**.
+    #### Windows PowerShell
+    ```powershell
+    .\.venv\Scripts\Activate.ps1
+    ```
+    #### Windows Command Prompt
+    ```bat
+    .\.venv\Scripts\activate.bat
+    ```
+3.	Change the directory by typing `cd random-number-generator-working` and pressing **Enter**.
 4.	Package the driver:
-    #### Mac
+    #### macOS
     ```sh
     python [path to the driver packager folder]/dp3/driverpackager.py ./ ./../compiled random_number.c4zproj
     ```
 
-    ### Windows
-
+    #### Windows
     ```sh
     python [path to the driver packager folder]\dp3\driverpackager.py .\ .\..\compiled random_number.c4zproj
     ```

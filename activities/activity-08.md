@@ -90,14 +90,20 @@ end
 7. Save the file.
 
 ### Compile the Driver
-8.	In the **integrated terminal**, package the driver:
-```
+8.	In the **integrated terminal**, change the directory by typing `cd ultimate-button-driver-working` and pressing **Enter**.
+9.	Package the driver using the command for your operating system:
+#### macOS
+```sh
 python ./../driverpackager/dp3/driverpackager.py ./ ./../compiled ultimate_button.c4zproj
 ```
-9. In **Composer Pro**, click **Driver > Add or Update Driver or Agent**.
-10. Choose the packaged driver in the **compiled** folder.
+#### Windows
+```sh
+python .\..\driverpackager\dp3\driverpackager.py .\ .\..\compiled ultimate_button.c4zproj
+```
+10. In **Composer Pro**, click **Driver > Add or Update Driver or Agent**.
+11. Choose the packaged driver in the **compiled** folder.
 
 ### View the Driver in Composer Pro
-11. Add the driver to any room in the project.
-12. View the configuration options in **Properties** and **Advanced Properties**. What is available through the proxy?
-13. Look at the available options in **Programming** for the device as well. What programming is available through the proxy?
+12. Add the driver to any room in the project.
+13. View the configuration options in **Properties** and **Advanced Properties**. What is available through the proxy?
+14. Look at the available options in **Programming** for the device as well. What programming is available through the proxy?

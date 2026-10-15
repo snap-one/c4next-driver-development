@@ -100,8 +100,8 @@ To setup your coding environment you will be:
     deactivate
     ```
 18. Create working copies of the **random-number-generator** and the **ultimate-button-driver** folders. This is so Git won't "git" after you for modifying the files from the repository.
-        1. Duplicate the *random-number-generator** folder and rename it to *random-number-generator-working**.
-        2. Duplicate the **ultimate-button-driver** folder and rename it to **ultimate-button-driver-working**.
+    1. Duplicate the **random-number-generator** folder and rename it to **random-number-generator-working**.
+    2. Duplicate the **ultimate-button-driver** folder and rename it to **ultimate-button-driver-working**.
 
 
 #### Mac
@@ -201,5 +201,5 @@ To setup your coding environment you will be:
     deactivate
     ```
 17. Create working copies of the **random-number-generator** and the **ultimate-button-driver** folders. This is so Git won't "git" after you for modifying the files from the repository.
-        1. Duplicate the *random-number-generator** folder and rename it to *random-number-generator-working**.
-        2. Duplicate the **ultimate-button-driver** folder and rename it to **ultimate-button-driver-working**.
+    1. Duplicate the **random-number-generator** folder and rename it to **random-number-generator-working**.
+    2. Duplicate the **ultimate-button-driver** folder and rename it to **ultimate-button-driver-working**.

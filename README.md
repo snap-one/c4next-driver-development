@@ -67,7 +67,8 @@ To setup your environment you will be:
     2.	Launch Visual Studio Code
     3.	Install the Github Copilot extension
     4.	Activate by logging in with your Github account
-    5.	Press **Ctrl - `** to open the **integrated terminal**.
+    5. Open the `c4next-driver-development` folder in Visual Studio Code by dragging the folder to the application or using **File** > **Open Folder**
+    6.	Press **Ctrl - `** to open the **integrated terminal**.
 
 10.	In the **integrated terminal**, Create a virtual environment: 
     ```sh

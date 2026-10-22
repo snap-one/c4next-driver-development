@@ -20,12 +20,12 @@ In this activity, you will get the project set up and do an initial compile of t
 4.	Package the driver:
     #### macOS
     ```sh
-    python [path to the driver packager folder]/dp3/driverpackager.py ./ ./../compiled random_number.c4zproj
+    python ./../../drivers-driverpackager/dp3/driverpackager.py ./ ./../compiled random_number.c4zproj
     ```
 
     #### Windows
     ```sh
-    python [path to the driver packager folder]\dp3\driverpackager.py .\ .\..\compiled random_number.c4zproj
+    python .\..\..\drivers-driverpackager\dp3\driverpackager.py .\ .\..\compiled random_number.c4zproj
     ```
 5.	In **Composer Pro**, click **Driver > Add or Update Driver or Agent**.
 6.	Choose the packaged driver in the **compiled** folder.

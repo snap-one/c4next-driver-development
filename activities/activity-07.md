@@ -68,11 +68,11 @@
 6. Package the driver using the command for your operating system:
 #### macOS
 ```sh
-python [path to the driver packager folder]/dp3/driverpackager.py ./ ./../compiled sample_light_driver.c4zproj
+python ./../../drivers-driverpackager/dp3/driverpackager.py ./ ./../compiled sample_light_driver.c4zproj
 ```
 #### Windows
 ```sh
-python [path to the driver packager folder]\dp3\driverpackager.py .\ .\..\compiled sample_light_driver.c4zproj
+python .\..\..\drivers-driverpackager\dp3\driverpackager.py .\ .\..\compiled sample_light_driver.c4zproj
 ```
 
 7. View the **Properties** tab. What do you notice can be configured just through the proxy?
